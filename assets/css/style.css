@@ -1,0 +1,319 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+body{
+    background: #000000;;
+    color:#fff;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+a {
+    color: whitesmoke !important;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white !important;
+}
+
+.anchor{
+    display: block;
+    height: 60px; /*same height as header*/
+    margin-top: -60px; /*same height as header*/
+    visibility: hidden;
+  }
+
+/* Navegação */
+#navegacao { /* O corpo da barra de navegação */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #252525;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%; /* Aumentar o espaço nas margens para centralizar o conteúdo */
+}
+
+.arrow {/* Seta para indicar o dropdown no menu jogos*/
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    bottom:5%;
+  } 
+
+.down{/* Rotação da seta para indicar o dropdown no menu jogos */
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+#navegacao .logo { /* Configuração das proporções da logo */
+    display: flex;
+    height: 55px;
+    width: 181px;
+    align-items: center;
+}
+
+#navegacao .menu { /* Configuração do menu */
+    list-style-type: none;
+    text-align: center;
+    color: whitesmoke;
+    text-transform: uppercase;
+    display: flex; /* Adicione flex para alinhar itens horizontalmente */
+}
+
+#navegacao .menu li { /* Configuração do menu */
+    margin: 0 20px;
+    line-height: 60px;
+    width: 100px;
+}
+
+#navegacao .menu a { /* Configuração dos links no menu da navbar */
+    color: whitesmoke !important;
+    text-decoration: none;
+    
+}
+
+#navegacao .menu a:hover { /* Hover dos links do menu */
+    color: #fff !important;
+}
+
+#navegacao .usuario { /* Configuração do alinhamento do icone de usuário e texto */
+    display: flex; /* Adicione flex para alinhar o ícone e o texto verticalmente */
+    align-items: center;
+}
+
+.btn{ /* Configuração das cores do botão */
+    background-color: #fff !important;
+    color:black !important;
+}
+
+#navegacao .usuario img { /* Configuração da imagem que representa o usuário no navbar */
+    height: 75%;
+    margin-top: 7px;
+    max-width: 23%;
+    margin-right: 10px; /* Adicione um espaçamento à direita do ícone */
+}
+.sidenav img{
+    max-width: 50px !important;
+}
+
+
+/* Modal */
+
+.modal{ /* O corpo do modal */
+    color:#fff;
+    background-color: #000 !important;
+    height: auto !important;
+    width: 30% !important;
+    padding: 0px !important;
+    overflow-y: hidden !important;
+}
+
+.logo-modal{ /* A logo presente quando se abre o modal */
+    width:70px !important;
+    height:70px !important;
+}
+
+#titulo{ /* O titulo abaixo da logo */
+    margin: 0 auto;
+}
+
+#logins img{ /* Imagens do modal representando as formas de login */
+    width:50%;
+    height: 45%;
+}
+
+.boxes{ /* Inputs para inserção de login */
+    background:#fff !important;
+    width:50% !important;
+    padding: 0px 5px !important;
+}
+
+/* Menu responsivo */
+.submit{ /* Botão para enviar os dados */
+    background-color: #fff;
+    border: 0px solid black;
+    border-radius: 2px;
+    height: 50px;
+    width: 65px;
+    padding: 0px 5px !important;
+}
+
+.sidenav-trigger{ /* Botão do menu responsivo */
+    display: none;
+}
+.sidenav{ /* Corpo do menu responsivo */
+    background-color:#252525 !important;
+    width: 80% !important;
+}
+.sidenav-overlay{
+    display: none !important;
+}
+
+.drag-target{
+    display: none !important;
+}
+
+/* Dropdown */
+
+#dropdown1{ /* Corpo do Dropdown */
+    background-color: #252525;
+    width:100% !important;
+    height: 380px !important;
+    left:-0% !important;
+    top: 100% !important; 
+}
+
+#dropdown2{ 
+    top: 0px!important;
+    background-color: #252525;
+    flex-direction: column !important;    
+}
+.sidenav li > a{
+    display: flex !important;
+    position:relative !important;
+}
+
+.dropdown-content{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+}
+
+.dropdown-content-sidnav{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    display: none;
+}
+
+
+.dropdown-jogos li{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start !important;
+    width: 300px !important;
+    z-index: -100;
+}
+
+
+.dropdown-content li:hover{
+    background-color:transparent !important;
+}
+
+
+/* Carrossel */
+.carousel {
+    max-width: 100% !important;
+    margin-top: 70px;
+}
+
+.carousel img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 900px) {
+    .modal{ /* O corpo do modal */
+        width: 60% !important;
+        height: auto;
+    }
+    #logins img{ /* Imagens do modal representando as formas de login */
+        width:80%;
+    }
+    .boxes{ /* Inputs para inserção de login */
+        width:70% !important;
+    }
+
+    @media (max-width: 600px) {
+        .carousel img{
+            scale: 0.6;
+        }
+        .carousel{
+            height: 300px !important;
+        }
+        .modal{ /* O corpo do modal */
+            width: 90% !important;
+        }
+        #logins img{ /* Imagens do modal representando as formas de login */
+            width:80%;
+        }
+        .boxes{ /* Inputs para inserção de login */
+            width:90% !important;
+        }
+    }
+}
+
+.carousel .carousel-item{
+    width: 650px !important; /* 650px */
+    height: auto !important; /* 350px */
+}
+
+.carousel .indicators{
+    background-color: black;
+    width:max-content;
+    height: max-content;
+    border-radius: 15px;
+    margin: 0px auto !important;
+}
+
+.carousel .indicators .indicator-item{
+    margin: 0px 5px 0px 5px !important;
+}
+
+
+/* Catálogo de Jogos */
+.carrosel-filmes h5 {
+    margin-top: 20px;
+    padding-left: 15px;
+}
+
+.owl-carousel .item {
+    margin-right: 10px;
+}
+
+.owl-dots{
+    display: none;
+}
+
+.box-filme {
+    max-width: 100%;
+    height: auto;
+}
+
+.nome-jogo{
+    text-align: center;
+    font-size:large;
+}
+
+/* Rodapé */
+#rodape {
+    top: 100px;
+    position: relative;
+    background-color: #252525;
+    color: whitesmoke;
+    text-align: center;
+    
+}
+
+#rodape p{
+    font-size:13px ;
+    margin-top: 15px;
+}
+
+
+.anchor{
+    display: block;
+    height: 60px; /*same height as header*/
+    margin-top: -60px; /*same height as header*/
+    visibility: hidden;
+  }
